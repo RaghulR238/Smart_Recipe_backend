@@ -1,4 +1,4 @@
-import  express  from "express";
+'https://main--graceful-kleicha-2d0c35.netlify.app/'import  express  from "express";
 import mongoose  from "mongoose";
 import dotenv from "dotenv";
 import userRoute from "./routes/user.route.js"
@@ -56,7 +56,7 @@ app.use((err, req, res, next) => {
     const errorMessage = err.message || "Something went wrong";
 
     res.status(errorStatus)
-        .header("Access-Control-Allow-Origin", "http://localhost:3000")
+        .header("Access-Control-Allow-Origin", "https://main--graceful-kleicha-2d0c35.netlify.app/")
         .header("Access-Control-Allow-Credentials", true)
         .send(errorMessage);
 });
