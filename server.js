@@ -43,7 +43,7 @@ app.use(cors(corsOptions));
 app.use(express.json())
 app.use(cookieParser())
 
-app.use("/", express.static(path.join(__dirname, '../client/assets')))
+app.use("/", express.static(path.join(__dirname, 'https://main--graceful-kleicha-2d0c35.netlify.app/')))
 app.use("/api/auth",router)
 app.use("/api/users",userRoute)
 // app.use("/api/users",aboutRoute)
