@@ -43,7 +43,7 @@ app.use(cors(corsOptions));
 app.use(express.json())
 app.use(cookieParser())
 
-app.use("/",savesRoute)
+
 app.use("/api/auth",router)
 app.use("/api/users",userRoute)
 // app.use("/api/users",aboutRoute)
