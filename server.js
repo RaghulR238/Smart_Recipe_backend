@@ -1,4 +1,4 @@
-'https://main--graceful-kleicha-2d0c35.netlify.app/'import  express  from "express";
+import  express  from "express";
 import mongoose  from "mongoose";
 import dotenv from "dotenv";
 import userRoute from "./routes/user.route.js"
