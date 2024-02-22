@@ -32,11 +32,20 @@ const connect=async()=>{
 
 
 
-const corsOptions = {
-    origin: 'https://graceful-kleicha-2d0c35.netlify.app/',  // Replace with your actual client origin
-    credentials: true,
-  };
-
+app.use(cors({
+    origin: function(origin, callback) {
+        // Check if the origin is allowed
+        if (!origin || origin === "https://graceful-kleicha-2d0c35.netlify.app/") {
+            // Allow the request from this origin
+            callback(null, true);
+        } else {
+            // Deny the request from other origins
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
+    methods: ["GET", "POST"],
+    credentials: true
+}));
 
 app.use(cors(corsOptions));
 //pp.use(cors());
