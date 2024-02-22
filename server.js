@@ -33,7 +33,7 @@ const connect=async()=>{
 
 
 const corsOptions = {
-    origin: 'https://main--graceful-kleicha-2d0c35.netlify.app/',  // Replace with your actual client origin
+    origin: 'https://graceful-kleicha-2d0c35.netlify.app/',  // Replace with your actual client origin
     credentials: true,
   };
 
