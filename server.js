@@ -47,7 +47,7 @@ app.use(cors({
     credentials: true
 }));
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 //pp.use(cors());
 app.use(express.json())
 app.use(cookieParser())
