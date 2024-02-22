@@ -35,7 +35,7 @@ const connect=async()=>{
 app.use(cors({
     origin: function(origin, callback) {
         // Check if the origin is allowed
-        if (!origin || origin === "https://graceful-kleicha-2d0c35.netlify.app/") {
+        if (!origin || origin === "https://graceful-kleicha-2d0c35.netlify.app") {
             // Allow the request from this origin
             callback(null, true);
         } else {
@@ -65,7 +65,7 @@ app.use((err, req, res, next) => {
     const errorMessage = err.message || "Something went wrong";
 
     res.status(errorStatus)
-        .header("Access-Control-Allow-Origin", "https://main--graceful-kleicha-2d0c35.netlify.app/")
+        .header("Access-Control-Allow-Origin", "https://main--graceful-kleicha-2d0c35.netlify.app")
         .header("Access-Control-Allow-Credentials", true)
         .send(errorMessage);
 });
