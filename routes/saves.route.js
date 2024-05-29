@@ -6,9 +6,9 @@ import { createSaves, deleteSaves, getSaves } from "../controller/saves.controll
 
 const router =express.Router();
 
-router.post("/create",verifyToken,createSaves);
-router.post("/delete",verifyToken,deleteSaves);
-router.get("/",verifyToken,getSaves);
+router.post("/create",createSaves);
+router.post("/delete",deleteSaves);
+router.get("/",getSaves);
 
 
 export default router
