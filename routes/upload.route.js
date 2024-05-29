@@ -6,9 +6,9 @@ import { createUpload, deleteUpload, getUpload, getUploads } from "../controller
 
 const router =express.Router();
 
-router.post("/up",verifyToken,createUpload);
-router.delete("/:id",verifyToken,deleteUpload);
+router.post("/up",createUpload);
+router.delete("/:id",deleteUpload);
 router.get("/all",getUpload);
-router.get("/",verifyToken,getUploads);
+router.get("/",getUploads);
 
 export default router
